@@ -13,7 +13,7 @@ use Generated\Shared\Transfer\RestCartItemProductConfigurationInstanceAttributes
 /**
  * Use this plugin to map additional data from `RestCartItemProductConfigurationInstanceAttributesTransfer` to `ProductConfigurationInstanceTransfer`.
  */
-interface ProductConfigurationMapperPluginInterface
+interface CartItemProductConfigurationMapperPluginInterface
 {
     /**
      * Specification:
