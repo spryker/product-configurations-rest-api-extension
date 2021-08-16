@@ -8,26 +8,25 @@
 namespace Spryker\Glue\ProductConfigurationsRestApiExtension\Dependency\Plugin;
 
 use Generated\Shared\Transfer\ProductConfigurationInstanceTransfer;
-use Generated\Shared\Transfer\RestCartItemProductConfigurationInstanceAttributesTransfer;
 
 /**
- * Use this plugin to map additional data from `RestCartItemProductConfigurationInstanceAttributesTransfer` to `ProductConfigurationInstanceTransfer`.
+ * Use this plugin to map additional data from `RestProductConfigurationPriceAttributesTransfer[]` to `ProductConfigurationInstanceTransfer`.
  */
-interface CartItemProductConfigurationMapperPluginInterface
+interface ProductConfigurationPriceMapperPluginInterface
 {
     /**
      * Specification:
-     * - Maps the `RestCartItemProductConfigurationInstanceAttributesTransfer` to `ProductConfigurationInstanceTransfer`.
+     * - Maps the `RestProductConfigurationPriceAttributesTransfer[]` to `ProductConfigurationInstanceTransfer`.
      *
      * @api
      *
-     * @param \Generated\Shared\Transfer\RestCartItemProductConfigurationInstanceAttributesTransfer $restCartItemProductConfigurationInstanceAttributesTransfer
+     * @param \Generated\Shared\Transfer\RestProductConfigurationPriceAttributesTransfer[] $restProductConfigurationPriceAttributesTransfers
      * @param \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
      *
      * @return \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer
      */
     public function map(
-        RestCartItemProductConfigurationInstanceAttributesTransfer $restCartItemProductConfigurationInstanceAttributesTransfer,
+        array $restProductConfigurationPriceAttributesTransfers,
         ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
     ): ProductConfigurationInstanceTransfer;
 }
